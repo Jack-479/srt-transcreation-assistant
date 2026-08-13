@@ -1,0 +1,43 @@
+[package]
+name = "srt_app_tauri"
+version = "1.0.0"
+description = "SRT Transcreation Assistant"
+authors = ["AsadJ"]
+edition = "2021"
+
+[profile.release]
+strip = true
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "srt_app_tauri_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "stream"] }
+regex = "1.10"
+chrono = "0.4"
+log = "0.4.33"
+tauri-plugin-log = "2.9.0"
+sqlx = { version = "0.7", features = ["sqlite", "runtime-tokio-rustls", "chrono"] }
+reqwest-eventsource = "0.6"
+futures-util = "0.3"
+
