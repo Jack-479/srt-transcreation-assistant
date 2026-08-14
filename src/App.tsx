@@ -412,9 +412,12 @@ export function App() {
       {/* Main workspace */}
       <div className="flex flex-1 flex-col overflow-hidden min-w-0">
         {/* Header */}
-        <header data-tauri-drag-region className="flex h-14 items-center justify-between border-b border-subtle bg-surface px-6 backdrop-blur-sm select-none shrink-0">
+        <header className="relative flex h-14 items-center justify-between border-b border-subtle bg-surface px-6 backdrop-blur-sm select-none shrink-0">
+          {/* Drag Region Background */}
+          <div data-tauri-drag-region className="absolute inset-0 z-0 cursor-move" />
+
           {/* Breadcrumb for workflow steps */}
-          <div className="flex items-center gap-1.5 min-w-0 overflow-hidden">
+          <div className="flex items-center gap-1.5 min-w-0 overflow-hidden relative z-10 pointer-events-auto">
             {workflowIndex !== -1 ? (
               WORKFLOW_STEPS.slice(0, workflowIndex + 1).map((s, i) => (
                 <React.Fragment key={s}>
@@ -436,7 +439,7 @@ export function App() {
             )}
           </div>
 
-          <div className="flex items-center gap-3 text-xs text-muted shrink-0">
+          <div className="flex items-center gap-3 text-xs text-muted shrink-0 relative z-10 pointer-events-auto">
             {sourcePath && (
               <span className="hidden sm:block bg-app px-2 py-0.5 rounded border border-subtle text-main max-w-[200px] truncate">
                 {sourcePath.split(/[\/\\]/).pop()}
