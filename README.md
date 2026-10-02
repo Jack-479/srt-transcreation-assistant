@@ -1,4 +1,4 @@
-# SRT Transcreation Assistant
+# 🍏 SRT Transcreation Assistant - Compiled for Mac (Apple Silicon M1/M2/M3/M4)
 
 ### 🍏 macOS Compatibility Fork (Apple Silicon M1/M2/M3)
 **Original Project by:** [jasial2](https://github.com)  
