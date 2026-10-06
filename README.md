@@ -2,7 +2,7 @@
 
 ### 🍏 macOS Compatibility Fork (Apple Silicon M1/M2/M3)
 **Original Project by:** [jasial2](https://github.com)  
-*This is a fork of jasial2's original translation assistant. The UI code and core logic belong to the original author. This fork has been adapted by **@Jack-479** to enable native compilation on macOS (Apple Silicon) systems using development containers and updated Tauri/WebKit dependencies.*
+*This is a fork of jasial2's original translation assistant. The UI code and core logic belong to the original author. This fork has been adapted by [@Jack-479] to enable native compilation on macOS (Apple Silicon) systems using development containers and updated Tauri/WebKit dependencies.*
 ---
 
 
@@ -90,7 +90,7 @@ To build or run this project locally, you will need:
 
 ### Building the Final Installer
 
-To compile the application into a standalone Windows `.exe` setup file:
+To compile the application into a Mac `.dmg` setup file:
 
 ```bash
 npm run tauri build
