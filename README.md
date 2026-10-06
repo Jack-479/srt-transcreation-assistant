@@ -8,6 +8,7 @@
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
+![Platform](https://img.shields.io/badge/platform-Mac-lightgreen.svg)
 ![Framework](https://img.shields.io/badge/framework-Tauri_v2_|_React-orange.svg)
 
 **SRT Transcreation Assistant** is an advanced, AI-powered desktop application designed to translate `.srt` subtitle files. 
